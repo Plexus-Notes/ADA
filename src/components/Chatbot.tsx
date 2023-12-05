@@ -108,6 +108,11 @@ const Chatbot: React.FC = () => {
         <div>No api key provided (reload to provide)</div>
       )}
       <div className="chat-window" ref={chatWindowRef}>
+        <div>
+          <a href="https://github.com/Plexus-Notes/ADA.git" target="_blank">
+            childbot codebase link
+          </a>
+        </div>
         {chatHistory
           ?.filter((e) => e && e?.role !== "system")
           .map((message, index) => (
@@ -150,7 +155,7 @@ const Chatbot: React.FC = () => {
       <input
         ref={inputRef}
         type="text"
-        placeholder="Say something to Childbot..."
+        placeholder="Message Childbot..."
         value={inputText}
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}
