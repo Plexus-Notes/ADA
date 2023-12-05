@@ -3,7 +3,7 @@
 import axios from "axios"
 import OpenAI from "openai"
 
-const API_KEY = "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"
+const API_KEY = process.env.OPENAI_API_KEY
 
 //process.env.OPENAI_API_KEY
 const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true })
