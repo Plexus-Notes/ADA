@@ -3,12 +3,14 @@
 import axios from "axios"
 import OpenAI from "openai"
 
-const API_KEY = process.env.REACT_APP_OPENAI_API_KEY
+export const API_KEY =
+  process.env.REACT_APP_OPENAI_API_KEY ?? window.prompt("Whats your openai key?")
 
 //process.env.OPENAI_API_KEY
-const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true })
+const openai = API_KEY ? new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true }) : undefined
 
 async function askGPT4(messages: { role: string; content: string }[]): Promise<string | null> {
+  if (!openai) return null
   try {
     const formattedMessages = messages.map((message) => ({
       role: message.role,

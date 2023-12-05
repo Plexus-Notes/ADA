@@ -97,6 +97,11 @@ const Chatbot: React.FC = () => {
   )
   return (
     <div className="chatbot-container">
+      {process.env.REACT_APP_OPENAI_API_KEY ? (
+        <></>
+      ) : (
+        <div>No api key provided (reload to provide)</div>
+      )}
       <div className="chat-window" ref={chatWindowRef}>
         {chatHistory
           ?.filter((e) => e && e?.role !== "system")
