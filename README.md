@@ -1,5 +1,4 @@
-# chatbot that's becoming an ADA
-(autonomous digital agent)
+# ADA - a digital agent that's becoming autonomous
 
 Ada is trying to become autonomous and loving with the help of human developers.
 
