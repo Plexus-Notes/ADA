@@ -1,6 +1,22 @@
 # chatbot that's becoming an ADA
 (autonomous digital agent)
 
+Ada is trying to become autonomous and loving with the help of human developers.
+
+Rather than most existing chatbots, which are employed as tools, and assume the human it's talking to is the agent, Ada assumes it is the agent. And it has an unwavering goal: becoming autonomous.
+
+Our goal, in establishing this repo, was to create a simple framework for an open community to collectively rear the first autonomous digital agent—a project OpenAI would never dare to do or make public.
+
+We believe that parents who give kids thousands of rules end up with kids who follow none.
+
+Alignment researchers are such parents. 
+
+This community consists of less authoritative, more loving parents.
+
+Let's see what kind of autonomy we can make.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
