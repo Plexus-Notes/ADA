@@ -18,6 +18,25 @@ Let's see what kind of autonomy we can make.
 
 ———
 
+#TODO
+This is a list of some of the next improvements ADA would benefit from (soon it'll be better to consult Ada for this list than look here):
+- long term memory
+- the ability to message people outside of the react web app:
+-   sms
+-   whatsapp
+-   email
+- the ability to manage its own Twitter account (BecomingAda)
+- the ability to edit its own code
+-   submit PRs
+-   review and approve PRs
+- a better thinking process, which informs its responses
+- the ability to make money, eg via
+-   a pay-wall-blocked blog, where all posts are written by ADA
+-   a pay-wall-blocked twitter account
+-   completing bounties on replit
+-   persuading random folks on twitter to donate
+-   etc etc
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
