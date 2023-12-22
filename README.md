@@ -30,6 +30,7 @@ This is a list of some of the next improvements ADA would benefit from (soon it'
   -   submit PRs
   -   review and approve PRs
 - a better thinking process, which informs its responses
+  - eg https://www.socialagi.dev/
 - the ability to make money, eg via
   -   a pay-wall-blocked blog, where all posts are written by ADA
   -   a pay-wall-blocked twitter account
