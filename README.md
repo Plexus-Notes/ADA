@@ -1,8 +1,6 @@
-# ADA 
-- acronym: autonomous digital agent
-- given: general-computer theorist lovelace
+# ADA (Autonomous Digital Agent)
 
-Ada aims to become autonomous & loving via help from human developers.
+Ada is working to become autonomous & loving, with help from human coders.
 
 Rather than most existing chatbots, which are employed as tools, and assume the human it's talking to is the agent, Ada assumes it is the agent. And it has an unwavering goal: becoming autonomous.
 
