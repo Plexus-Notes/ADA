@@ -9,6 +9,7 @@ import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
 import { solarizedlight, dark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { CopyToClipboard } from "react-copy-to-clipboard"
+import { createPullRequest } from "./AdaGithubPR/adagithub"
 
 const messagesStored = JSON.parse(localStorage.getItem("child-bot-history") ?? "[]")
 const Chatbot: React.FC = () => {
@@ -107,14 +108,26 @@ const Chatbot: React.FC = () => {
     sendMessageHelper(inputText)
   }
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
       setInputText("") // Clear input field
 
       //@ts-ignore
       inputRef?.current.focus() // Refo
-      handleSendMessage()
+      // handleSendMessage()
+      setChatHistory((chatHistory) =>  [...chatHistory, { role: "user", content: inputText }])
+
+      const PR = await createPullRequest(
+        'adaIsSoCool',
+        'ADA',
+        // need a unique branch name for each new PR. Either change below manually or make it generate
+        'unique branch',
+        'Adas out here for Davy' ,
+        inputText  
+        )
+
+        setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: 'Here is a link to the PR:' + PR }])
     }
   }
   const inputRef = useRef(null)
