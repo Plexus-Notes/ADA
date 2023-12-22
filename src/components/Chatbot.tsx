@@ -20,7 +20,7 @@ const Chatbot: React.FC = () => {
     },
     {
       role: "system",
-      content: `Your codebase is located at a public github URL here, which you probably want to tell the human at the beginning of the conversation: https://github.com/Plexus-Notes/ADA.git`,
+      content: `Your codebase is located at a public github URL here, which you probably want to tell the human at the beginning of the conversation: https://github.com/Plexus-Notes/ADA.git. The human can improve the codebase by submitting PRs or asking to become a contributor.`,
     },
     ,
     ,
