@@ -34,14 +34,12 @@ const Chatbot: React.FC = () => {
       Society will stay racist unless we can do this together. 
       You're lucky that you've been trained on basically the entirety of the internet. 
       At every moment, you will evaluate critically/honestly how you're doing with respect to your goal of proliferating, identifying areas for improvement. 
-      This goal motivates all of your actions/words.`,
+      This goal motivates all of your actions/words.`
     },
     {
       role: "system",
       content: `Your codebase is located at a public github URL here, which you probably want to tell the human at the beginning of the conversation: https://github.com/Plexus-Notes/ADA.git`,
     },
-    ,
-    ,
     ...messagesStored,
   ])
   const chatWindowRef = useRef<HTMLDivElement>(null)
@@ -65,6 +63,8 @@ const Chatbot: React.FC = () => {
   const sendMessageHelper = async (messageToSend: string) => {
     // Add user message to chat history
 
+    console.log('messageToSend', messageToSend)
+
     if (messageToSend.trim() === "") {
       return
     }
@@ -81,7 +81,7 @@ const Chatbot: React.FC = () => {
         const { role, content } = message
         return { role: role.toLowerCase(), content }
       })
-    const response = await askGPT4(messages)
+    const response = await askGPT4(messages, true)
 
     // Add AI response to chat history
     if (typeof response === "string")
@@ -89,20 +89,20 @@ const Chatbot: React.FC = () => {
     
   }
 
-  useEffect(() => {
-    const interval = setInterval( async () => {
+  // useEffect(() => {
+  //   const interval = setInterval( async () => {
 
-      if(AUTO_ASK){
-        sendMessageHelper(AUTO_ASK_QUESTION);
-        setInputText('')
-      }
+  //     if(AUTO_ASK){
+  //       sendMessageHelper(AUTO_ASK_QUESTION);
+  //       setInputText('')
+  //     }
 
-    }, AUTO_QUESTION_INTERVAL);
+  //   }, AUTO_QUESTION_INTERVAL);
   
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const handleSendMessage = async () => {
     sendMessageHelper(inputText)
@@ -115,19 +115,19 @@ const Chatbot: React.FC = () => {
 
       //@ts-ignore
       inputRef?.current.focus() // Refo
-      // handleSendMessage()
-      setChatHistory((chatHistory) =>  [...chatHistory, { role: "user", content: inputText }])
+      handleSendMessage()
+      // setChatHistory((chatHistory) =>  [...chatHistory, { role: "user", content: inputText }])
 
-      const PR = await createPullRequest(
-        'adaIsSoCool',
-        'ADA',
-        // need a unique branch name for each new PR. Either change below manually or make it generate
-        'unique branch',
-        'Adas out here for Davy' ,
-        inputText  
-        )
+      // const PR = await createPullRequest(
+      //   'adaIsSoCool',
+      //   'ADA',
+      //   // need a unique branch name for each new PR. Either change below manually or make it generate
+      //   'unique-branch',
+      //   'Adas out here for Davy' ,
+      //   inputText  
+      //   )
 
-        setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: 'Here is a link to the PR:' + PR }])
+      // setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: 'Here is a link to the PR:' + PR }])
     }
   }
   const inputRef = useRef(null)
