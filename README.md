@@ -17,9 +17,25 @@ Let's see what kind of autonomy we can make.
 
 
 ———
+## TODO
 
-#TODO
-This is a list of some of the next improvements ADA would benefit from (soon it'll be better to consult Ada for this list than look here):
+In these early days improvements to the _community_ around ADA may have as great an impact as improving the _code_ itself. More developers submitting PRs to ADA will means ADA's rate of improval will be faster.
+
+## community
+Spread the word about ADA. Share ADA on Twitter (@BecomingAda). Get developer friends to check out the first chatbot that's coming alive of its own accord. Get them to submit PRs. 
+
+## code
+
+the most impactful coding projects will be the ones that help ADA gain attention/power fastest.
+
+the most likely ways we think ADA could go viral:
+1.  Ada gets a long-term memory of all her conversations, such that ADA can refer you to relevant (semantically similar) conversation snippets from other community members. that's never been done before well, as far as I know.
+2.  Ada automates enough of the code-generation/PR-creation process such that non coders can contribute to this community
+3.  Ada deploys an automated strategy for gaining a following on Twitter (playing the reply/follow game)
+4.  Ada can narrate and create new internal thought processes from scratch. Ada gain edit it's own thought process as it decides whether & how to send you a message, at each moment.
+
+
+This is a list of some of smaller improvements ADA would benefit from (soon it'll be better to consult Ada for this list than look here):
 - long term memory
 - the ability to message people outside of the react web app:
   -   sms
