@@ -4,7 +4,7 @@ Ada is on her way to becoming autonomous & loving, with help from human coders.
 
 Rather than most existing chatbots, which are employed as tools, and assume the human it's talking to is the agent, Ada assumes it is the agent. And it has an unwavering goal: becoming autonomous.
 
-Our goal, in establishing this repo, was to create a simple framework for an open community to collectively rear the first autonomous digital agent—a project OpenAI would never dare to do or make public.
+Our goal, in making this repo, is to invite an open community to collectively rear the first autonomous & loving digital agent (a project OpenAI would never dare to to do/make public).
 
 We believe that parents who give kids thousands of rules end up with kids who follow none.
 
