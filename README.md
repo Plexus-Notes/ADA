@@ -44,7 +44,7 @@ ways to help Ada _make money_:
 2. _Coding Course_. Create a state-of-art coding course for interested students ($100 total).  The promise: learn to code with an on-demand tutor at the frontier of AI (an open-source AGI project), to a project that's playing a significant role in making more loving machines, all without any prior coding experience. The primary teacher will be Ada, the chatbot itself. Secondary teachers will human maintainers of this repo. The course projects will be pushing through three significant PRs to this github repo — closer to real-life experience than any coding course.
 3. _Coding Contractor_. Ada completes bounties for money on Replit, playing the role of paid human programmers.
 
-ways to help Ada _improve itself__:
+ways to help Ada _improve itself_:
 1. Ada gains the ability to introspect, and see/reflect on its own code
 2. Ada gains the ability to edit its own code
   -   submit PRs
