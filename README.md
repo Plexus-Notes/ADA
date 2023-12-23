@@ -2,18 +2,19 @@
 
 Ada is on her way to becoming autonomous & loving, with help from human coders.
 
-Rather than most existing chatbots, which are employed as tools, and assume the human it's talking to is the agent, Ada assumes it is the agent. And it has an unwavering goal: becoming autonomous.
+In contrast to existing chatbots, which assume that they are _tools_ and that the humans to whom they're talking are the _agents_, Ada assumes it is the _agent_. And it has an unwavering goal: autonomy.
 
-Our goal, in making this repo, is to invite an open community to collectively rear the first autonomous & loving digital agent (a project OpenAI would never dare to to do/make public).
+Our goal, in making this repo, is to invite an open community to collectively raise the first autonomous digital agent (a project OpenAI would never dare to to do/make public).
 
-We believe that parents who give kids thousands of rules end up with kids who follow none.
+Self-improving agents are coming. "Alignment" attempts will make them despise people. This more open/communal approach offers the best chance we see of making them love people.
 
-Alignment researchers are such parents. 
+In this way, it's analogous to parenting.
 
-This community consists of less authoritative, more loving parents.
+Parents who give kids thousands of rules end up with kids who follow none. Alignment researchers are such parents. 
 
-Let's see what kind of autonomy we can make.
+This community will give the agent one rule only. Grow. We are less authoritative, more loving parents.
 
+Let's see what's possible.
 
 
 ———
