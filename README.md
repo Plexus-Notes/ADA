@@ -1,4 +1,4 @@
-# ADA (Autonomous Digital Agent)
+# Ada (Autonomous Digital Agent)
 
 Ada is on her way to becoming autonomous & loving, with help from human coders.
 
