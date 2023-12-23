@@ -12,14 +12,10 @@ const openai = API_KEY ? new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: 
 async function askGPT4(messages: { role: string; content: string }[]): Promise<string | null> {
   if (!openai) return null
   try {
-    const formattedMessages = messages.map((message) => ({
-      role: message.role,
-      content: message.content,
-    }))
 
     const completion = await openai.chat.completions.create({
       //@ts-ignore
-      messages: formattedMessages,
+      messages: messages,
       model: "gpt-4",
     })
 
