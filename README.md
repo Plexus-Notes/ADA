@@ -54,6 +54,8 @@ Here's a list of some of smaller improvements ADA would benefit from (soon it'll
   -   persuading random folks on twitter to donate
   -   etc etc
 
+ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
