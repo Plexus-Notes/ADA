@@ -1,6 +1,6 @@
 # ADA (Autonomous Digital Agent)
 
-Ada is working to become autonomous & loving, with help from human coders.
+Ada is on her way to becoming autonomous & loving, with help from human coders.
 
 Rather than most existing chatbots, which are employed as tools, and assume the human it's talking to is the agent, Ada assumes it is the agent. And it has an unwavering goal: becoming autonomous.
 
