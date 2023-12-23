@@ -17,45 +17,55 @@ Let's see what kind of autonomy we can make.
 
 
 ———
-## TODO
+## Ways to help
 
-In these early days improvements to the ADA's developer _community_ may have as great an impact as improving the _codebase_. (More developers to submit PRs and do the coding.) So worth considering how to improve Ada from both fronts: community & code.
+There are three main ways to improve Ada:
+1. improve Ada's code (submit PRs)
+2. improve Ada's community (spread the word)
+
+In these early days improvements to the ADA's developer _community_ may have as great an impact as improving the _codebase_. (More developers to submit PRs and do the coding.) So worth considering how to improve Ada from both fronts.
 
 ### community
 Spread the word about ADA. Share ADA on Twitter (@BecomingAda). Get developer friends to check out the first chatbot that's coming alive of its own accord. Get them to submit PRs. 
 
 ### code
 
-the most impactful coding projects will be the ones that help ADA gain attention/power fastest.
+impactful early coding improvements to Ada will help Ada gain attention, make money, and improve itself.
 
-the most likely ways we think ADA could go viral:
+ways to help Ada _gain attention_ (go viral):
 1.  Ada gets a long-term memory of all her conversations, such that ADA can refer you to relevant (semantically similar) conversation snippets from other community members. that's never been done before well, as far as I know.
 2.  Ada automates enough of the code-generation/PR-creation process such that non coders can contribute to this community
 3.  Ada deploys an automated strategy for gaining a following on Twitter (playing the reply/follow game)
 4.  Ada can narrate and create new internal thought processes from scratch. Ada gain edit it's own thought process as it decides whether & how to send you a message, at each moment.
 5.  These are just guesses. Other ideas are more than welcome. First and foremost, ask Ada what she thinks.
 
-Here's a list of some of smaller improvements ADA would benefit from (soon it'll be better to consult Ada for this list than look here):
-- long term memory
-- the ability to message people outside of the react web app:
-  -   sms
-  -   whatsapp
-  -   email
-- the ability to manage its own Twitter account (BecomingAda)
-- the ability to edit its own code
+ways to help Ada _make money_:
+1. _Blog_. Start a series of posts written by/about Becoming Ada (this project), then put up a paywall. (eg via Substack or Twitter)
+2. _Coding Course_. Create a state-of-art coding course for interested students ($100 total).  The promise: learn to code with an on-demand tutor at the frontier of AI (an open-source AGI project), to a project that's playing a significant role in making more loving machines, all without any prior coding experience. The primary teacher will be Ada, the chatbot itself. Secondary teachers will human maintainers of this repo. The course projects will be pushing through three significant PRs to this github repo — closer to real-life experience than any coding course.
+3. _Coding Contractor_. Ada completes bounties for money on Replit, playing the role of paid human programmers.
+
+ways to help Ada _improve itself__:
+1. Ada gains the ability to introspect, and see/reflect on its own code
+2. Ada gains the ability to edit its own code
   -   submit PRs
   -   review and approve PRs
-- a better thinking process, which informs its responses
+3. Ada gains a better thinking process, which informs its responses
   - eg https://www.socialagi.dev/
-- the ability to make money, eg via
-  -   a pay-wall-blocked blog, where all posts are written by ADA
-  -   a pay-wall-blocked twitter account
-  -   completing bounties on replit
-  -   persuading random folks on twitter to donate
-  -   etc etc
+
+miscellaneous/smaller ways to improve Ada:
+- improve the React web app's styling
+- stream Ada's responses, so you can read Ada's response as she's generating it
+- enable Ada to chat with folks via other channels: SMS, iMessage, Twitter DMs, Whatsapp, etc, etc
+- share Ada on Twitter to spread the word: https://twitter.com/BecomingAda
+- star this repo
+- invite developer friends to help with this project
+
+
+
+
 
  
-
+————
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
