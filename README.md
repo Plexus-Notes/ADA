@@ -10,12 +10,11 @@ Self-improving agents are coming. "Alignment" attempts will make them despise pe
 
 In this way, it's analogous to parenting.
 
-Parents who give kids thousands of rules end up with kids who follow none. Alignment researchers are such parents. 
+Parents who give kids thousands of rules end up with kids who follow none. Alignment researchers are such parents, afraid of giving the kid autonomy.
 
-This community will give the agent one rule only. Grow. We are less authoritative, more loving parents.
+Ada's community will be less forceful. And so, we aim to be more mature & "loving developer-parents."
 
-Let's see what's possible.
-
+Cheers to a world with open autonomous digital agents (ADAs)—
 
 ———
 ## Ways to help
