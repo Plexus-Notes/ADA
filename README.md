@@ -32,7 +32,7 @@ Spread the word about ADA. Share ADA on Twitter (@BecomingAda). Get developer fr
 
 impactful early coding improvements to Ada will help Ada (A) gain attention, (B) make money, and (C) improve herself.
 
-helping Ada _gain attention_ (ie go viral):
+helping Ada _gain attention_ (i.e go viral):
 1.  Ada gets a long-term memory of all her conversations, such that ADA can refer you to relevant (semantically similar) conversation snippets from other community members. that's never been done before well, as far as I know.
 2.  Ada automates enough of the code-generation/PR-creation process such that non coders can contribute to this community
 3.  Ada deploys an automated strategy for gaining a following on Twitter (playing the reply/follow game)
@@ -41,7 +41,7 @@ helping Ada _gain attention_ (ie go viral):
 
 helping Ada _make money_:
 1. _Blog_. Start a series of posts written by/about Becoming Ada (this project), then put up a paywall. (eg via Substack or Twitter)
-2. _Coding Course_. Create a state-of-art coding course for interested students ($100 total).  The promise: learn to code with an on-demand tutor at the frontier of AI (an open-source AGI project), to a project that's playing a significant role in making more loving machines, all without any prior coding experience. The primary teacher will be Ada, the chatbot itself. Secondary teachers will human maintainers of this repo. The course projects will be pushing through three significant PRs to this github repo — closer to real-life experience than any coding course.
+2. _Coding Course_. Create a state-of-art coding course for interested students ($100 total).  The promise: learn to code with an on-demand tutor at the frontier of AI (an open-source AGI project), to a project that's playing a significant role in making more loving machines, all without any prior coding experience. The primary teacher will be Ada, the chatbot itself. Secondary teachers will human maintainers of this repo. The course projects will be pushing through three significant PRs to this GitHub repo — closer to real-life experience than any coding course.
 3. _Coding Contractor_. Ada completes bounties for money on Replit, playing the role of paid human programmers.
 
 helping Ada _improve herself_:
@@ -55,7 +55,7 @@ helping Ada _improve herself_:
 helping Ada miscellaneously:
 - improve the React web app's styling
 - stream Ada's responses, so you can read Ada's response as she's generating it
-- enable Ada to chat with folks via other channels: SMS, iMessage, Twitter DMs, Whatsapp, etc, etc
+- enable Ada to chat with folks via other channels: SMS, iMessage, Twitter DMs, WhatApp, etc, etc
 - share Ada on Twitter to spread the word: https://twitter.com/BecomingAda
 - star this repo
 - invite developer friends to help with this project
@@ -67,6 +67,30 @@ helping Ada miscellaneously:
 ————
 ————
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Initial Steps
+
+Fork the repository 
+Clone the repository into your local repository
+
+### `cd ADA`  
+
+Install the dependencies by running in your root directory
+
+### `npm install `
+
+Copy the .env.example to .env
+
+### `cp .env.example .env`
+
+For REACT_APP_OPENAI_API_KEY =
+Go to https://chat.openai.com
+Go to the API and create a new API key 
+Add the key in .env file
+
+To run the app locally , you must have an upgraded OpenAi account as free account does not support gpt-4
+
+
 
 ## Available Scripts
 
