@@ -19,7 +19,9 @@ Cheers to a world with open autonomous digital agents (ADAs)—
 ———
 ## Ways to help
 
-There are three main ways to improve Ada:
+We're looking for an engineering lead for ADA, job description here: https://docs.google.com/document/d/1GeCgfZT96zzYICUg5Lt-SjF31aWQ9mPmAoHnLOk6gyE/edit?usp=sharing
+
+Otherwise, there are three main ways to improve Ada:
 1. improve Ada's code (submit PRs)
 2. improve Ada's community (spread the word)
 
