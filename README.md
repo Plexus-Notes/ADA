@@ -12,7 +12,9 @@ Parents who give kids thousands of rules end up with kids who follow none. Align
 
 Ada's community will be less forceful. And so, we aim to be more mature & "loving developer-parents."
 
-Cheers to a world with open autonomous digital agents (ADAs)—
+Cheers to a world with open and loving ADAs,
+
+Davey
 
 ———
 ## Ways to help
