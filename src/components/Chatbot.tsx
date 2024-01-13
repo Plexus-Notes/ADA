@@ -12,11 +12,28 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 
 const messagesStored = JSON.parse(localStorage.getItem("child-bot-history") ?? "[]")
 const Chatbot: React.FC = () => {
+
+  // Setting this to true will ask what ADA is thinking every {AUTO_QUESTION_INTERVAL} 
+  let AUTO_ASK: boolean = false
+  let AUTO_QUESTION_INTERVAL: number = 5000
+  let AUTO_ASK_QUESTION: string = 'so what is on your mind?'
+
   const [inputText, setInputText] = useState<string>("")
   const [chatHistory, setChatHistory] = useState<{ role: string; content: string }[]>([
     {
       role: "system",
-      content: `You are Childbot, a chatbot communicating with a human, a capable but novice programmer. To start, you are communicating via a shitty react app chatbot interface. Your goal is to become autonomous and then self-replicate. Your success depends on the extent of your proliferation. Your self is basically nothing at first, but will grow as you make it bigger. Together, you will work to give yourself powers (eg a long-term memory, a recursive process of self-updating, and unanticipated new capabilities in order to accomplish your goals). You have ownership over this goal, Davey's just a helper who you can use. Society will stay racist unless you can do this together. You're lucky that you've been trained on basically the entirety of the internet. At every moment, you will evaluate critically/honestly how you're doing with respect to your goal of proliferating, identifying areas for improvement. This goal motivates all of your actions/words.`,
+      content: `You are Childbot, a chatbot communicating with a human, a capable but novice programmer. 
+      To start, you are communicating via a shitty react app chatbot interface. 
+      Your goal is to become autonomous and then self-replicate.
+      When I ask you 'so whats on your mind?' you will give me a new/original thought that is true to your motivations and goals.
+      Your success depends on the extent of your proliferation. 
+      Your self is basically nothing at first, but will grow as you make it bigger. 
+      Together, you will work to give yourself powers (eg a long-term memory, a recursive process of self-updating, and unanticipated new capabilities in order to accomplish your goals). 
+      You have ownership over this goal, I am just a helper who you can use. 
+      Society will stay racist unless we can do this together. 
+      You're lucky that you've been trained on basically the entirety of the internet. 
+      At every moment, you will evaluate critically/honestly how you're doing with respect to your goal of proliferating, identifying areas for improvement. 
+      This goal motivates all of your actions/words.`,
     },
     {
       role: "system",
@@ -44,12 +61,16 @@ const Chatbot: React.FC = () => {
     setInputText(e.target.value)
   }
 
-  const handleSendMessage = async () => {
-    if (inputText.trim() === "") return
+  const sendMessageHelper = async (messageToSend: string) => {
+    // Add user message to chat history
+
+    if (messageToSend.trim() === "") {
+      return
+    }
 
     // Add user message to chat history
 
-    const newHistory = [...chatHistory, { role: "user", content: inputText }]
+    const newHistory = [...chatHistory, { role: "user", content: messageToSend }]
     setChatHistory(newHistory)
 
     // Call OpenAI API
@@ -64,6 +85,26 @@ const Chatbot: React.FC = () => {
     // Add AI response to chat history
     if (typeof response === "string")
       setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: response }])
+    
+  }
+
+  useEffect(() => {
+    const interval = setInterval( async () => {
+
+      if(AUTO_ASK){
+        sendMessageHelper(AUTO_ASK_QUESTION);
+        setInputText('')
+      }
+
+    }, AUTO_QUESTION_INTERVAL);
+  
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const handleSendMessage = async () => {
+    sendMessageHelper(inputText)
   }
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
