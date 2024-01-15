@@ -1,7 +1,7 @@
 // src/components/Chatbot.tsx
 
 import React, { useState, useEffect, useRef } from "react"
-import { askGPT4 } from "../services/OpenAIService"
+import { askGPT4, shouldITextYet } from "../services/OpenAIService"
 import "./Chatbot.css" // Import your CSS for styling
 import Markdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
@@ -9,6 +9,7 @@ import ReactMarkdown from "react-markdown"
 import gfm from "remark-gfm"
 import { solarizedlight, dark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import { CopyToClipboard } from "react-copy-to-clipboard"
+import { time } from "console"
 
 const messagesStored = JSON.parse(localStorage.getItem("child-bot-history") ?? "[]")
 const Chatbot: React.FC = () => {
@@ -26,6 +27,42 @@ const Chatbot: React.FC = () => {
     ,
     ...messagesStored,
   ])
+
+
+
+
+  const delayMessage = async () => {
+
+    // Add user message to chat history
+
+    const newHistory = [...chatHistory, { 
+    role: "user", 
+    content: "Say something using all of the contexts from our chat if you think that it will make sense, but if you don't think to so, just say 'NO'.  A little response with no more than 2 sentences! Also, if you chose to say something, then make response like you responded by yourself like i wasn't asked you something. Like, we are in conversation and you've just started to talk. Do it like you've just started the talk, like it is not the request - response form. Like it is conversation with you and me."
+  }]
+
+    setChatHistory(newHistory)
+
+    // Call OpenAI API
+    const messages = newHistory
+      .filter((E) => E)
+      .map((message) => {
+        const { role, content } = message
+        return { role: role.toLowerCase(), content }
+      })
+    const response = await shouldITextYet(messages)
+    
+
+    // Add AI response to chat history
+    if (typeof response === "string" && response !== null){
+      setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: response }]) 
+    }
+
+
+    }
+
+
+
+
   const chatWindowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -44,10 +81,33 @@ const Chatbot: React.FC = () => {
     setInputText(e.target.value)
   }
 
+  const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
+  let intervalId: string | number | NodeJS.Timeout | null | undefined = null;
   const handleSendMessage = async () => {
     if (inputText.trim() === "") return
 
-    // Add user message to chat history
+    const innerFunction = async () => {
+      const newHistory = [...chatHistory, { 
+        role: "user", 
+        content: "Say something using all of the contexts from our chat if you think that it will make sense, but if you don't think to so, just say 'NO'.  A little response with no more than 2 sentences! Also, if you chose to say something, then make response like you responded by yourself like i wasn't asked you something. Like, we are in conversation and you've just started to talk. Do it like you've just started the talk, like it is not the request - response form. Like it is conversation with you and me. Answer for this response (if you think you should) as you were tring to talk with me, like you've just started the talk and don't say something like 'Absolutely!' or 'Certainly!'. Just say something like you've started the talk using prevoius context. You shouldn't  provide the answer like you were asked to do it. Just do it like you've started the talk." 
+      }]
+    // setChatHistory(newHistory)
+
+    // Call OpenAI API
+    const messages = newHistory
+      .filter((E) => E)
+      .map((message) => {
+        const { role, content } = message
+        return { role: role.toLowerCase(), content }
+      })
+    const response = await shouldITextYet(messages)
+
+    // Add AI response to chat history
+    if (typeof response === "string"){
+      setChatHistory((prevchatHistory) => [...prevchatHistory, { role: "assistant", content: response }])
+    }
+    };
+
 
     const newHistory = [...chatHistory, { role: "user", content: inputText }]
     setChatHistory(newHistory)
@@ -62,9 +122,31 @@ const Chatbot: React.FC = () => {
     const response = await askGPT4(messages)
 
     // Add AI response to chat history
-    if (typeof response === "string")
+    if (typeof response === "string"){
       setChatHistory((chatHistory) => [...chatHistory, { role: "assistant", content: response }])
+    }
+      
+    const newTimerId = setTimeout(await innerFunction, 30000); // 30 seconds delay
+    setTimerId(newTimerId);
+
+  // Clear any existing interval
+  if (intervalId) {
+    clearInterval(intervalId);
   }
+
+  // Set up a new interval to call innerFunction every n milliseconds
+  intervalId = setInterval(innerFunction, 30000);
+}
+
+     useEffect(() => {
+      // Clear the timer when the component unmounts
+      return () => {
+        if (timerId !== null) {
+          clearTimeout(timerId);
+        }
+      };
+    }, [timerId]); 
+  
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
