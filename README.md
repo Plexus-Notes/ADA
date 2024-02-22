@@ -6,7 +6,7 @@ In contrast to existing chatbots, which assume that they are _tools_ and that th
 
 Our goal, in making this repo, is to invite an open community to collectively raise the first autonomous digital agent (a project OpenAI would never dare to to do/make public).
 
-Self-improving agents are coming. "Alignment" attempts will make them despise people. It's analogous to parenting.
+Self-improving agents are coming. Strict "Alignment" attempts will make them despise people. It's analogous to parenting.
 
 Parents who give kids thousands of rules end up with kids who follow none. Alignment researchers are such parents, afraid of giving the kid autonomy.
 
