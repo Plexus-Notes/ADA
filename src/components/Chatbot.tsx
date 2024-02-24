@@ -110,7 +110,7 @@ const Chatbot: React.FC = () => {
       <div className="chat-window" ref={chatWindowRef}>
         <div>
           <a href="https://github.com/Plexus-Notes/ADA.git" target="_blank">
-            childbot codebase link
+            ADA codebase link
           </a>
         </div>
         {chatHistory
